@@ -39,7 +39,7 @@ func main() {
 
 	//-----------------------------------------------------------------------
 	//--- Process the CSV File
-	var filePath = "arrest_data.csv"
+	var filePath = "ARRESTDATA.csv"
 	f, err := os.Open(filePath)
 	if err != nil {
 		log.Fatal("Unable to read input file "+filePath, err)
@@ -56,14 +56,23 @@ func main() {
 		if err != nil {
 			log.Fatal(err)
 		}
-		var age_at_arrest = record[0]
-		var gender = record[1]
-		var date_of_arrest = record[2]
-		var arrest_location = record[3]
-		var arresting_officer = record[4]
-		var arresting_agency = record[5]
-		var charge = record[6]
-		//fmt.Println(gender + "," + arresting_officer + "," + arresting_agency + "," + charge)
+		var age_at_arrest = record[1]
+		var gender = record[2]
+		var date_of_arrest = record[5]
+		var arrest_location = record[6]
+		var arresting_officer = record[7]
+		var arresting_agency = record[8]
+		var charge = record[9]
+
+		// var age_at_arrest = record[0]
+		// var gender = record[1]
+		// var date_of_arrest = record[2]
+		// var arrest_location = record[3]
+		// var arresting_officer = record[4]
+		// var arresting_agency = record[5]
+		// var charge = record[6]
+
+		fmt.Println(gender + "," + arresting_officer + "," + arresting_agency + "," + charge)
 		//-----------------------------------------------------------------------
 
 		//-----------------------------------------------------------------------
